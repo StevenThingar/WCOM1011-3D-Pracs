@@ -2322,7 +2322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8381070868978661925}
   m_Layer: 0
-  m_Name: door
+  m_Name: ClickDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2358,6 +2358,7 @@ GameObject:
   - component: {fileID: 8374320008477850405}
   - component: {fileID: 8363491969275157327}
   - component: {fileID: 8406259757674821131}
+  - component: {fileID: 8406259757674821132}
   m_Layer: 0
   m_Name: Door Panel
   m_TagString: Untagged
@@ -2375,8 +2376,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8380776123849601767}
   - component: {fileID: 8380776123849601768}
+  - component: {fileID: 8380776123849601769}
   m_Layer: 0
-  m_Name: Pivot
+  m_Name: Pivot-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2482,10 +2484,30 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &8380776123849601769
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378540739978070049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24c9c24c583fa1641b1eeb0c9a88532e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &8380794677250724131
 Transform:
   m_ObjectHideFlags: 0
@@ -2621,6 +2643,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8406259757674821132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378480398620854411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1fdc3397488d4b99b94cd1dc61561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8380776123849601769}
+  lookAtTriggerName: LookAt
+  lookAwayTriggerName: LookAway
+  lookingAtBoolName: LookingAt
+  mouseDownTriggerName: MouseDown
+  mouseUpTriggerName: MouseUp
+  mouseDragBoolName: MouseDrag
 --- !u!65 &8406449310994613259
 BoxCollider:
   m_ObjectHideFlags: 0
